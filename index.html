@@ -20,13 +20,15 @@
 
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
-    <body class="bg-gray-800 text-white font-sans">
+    <body class="bg-gray-800 text-white font-sans pt-16">
         <!-- Header (고정) -->
-        <div class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 z-50">
+        <div
+            class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 z-50"
+            style="padding-top: 50px"
+        >
             <div class="flex justify-between items-center">
-                <h1 class="text-xl font-bold">No More Think</h1>
+                <h1 class="text-2xl font-bold">No More Think</h1>
                 <div class="flex items-center">
-                    <!-- 사용자 프로필 이미지 -->
                     <img
                         src="https://via.placeholder.com/40"
                         alt="User Profile"
@@ -45,28 +47,62 @@
             <p class="text-lg text-center">
                 풀스크린 모드에서 콘텐츠를 확인하세요.
             </p>
-            <div class="mt-6">
-                <!-- 이미지 추가 -->
-                <img
-                    src="https://via.placeholder.com/600x300"
-                    alt="Placeholder Image"
-                    class="w-full rounded-lg mb-6"
-                />
-                <p class="text-lg text-center">
-                    텔레그램 미니앱의 예시 화면입니다. 다양한 기능을 확인하세요.
-                </p>
+
+            <!-- 대시보드 영역 -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 대시보드 항목 -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">보유 코인</h3>
+                    <ul>
+                        <li class="flex justify-between">
+                            <span>비트코인</span>
+                            <span>1.25 BTC</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>이더리움</span>
+                            <span>3.45 ETH</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>라이트코인</span>
+                            <span>15 LTC</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">총 수량</h3>
+                    <p class="text-2xl font-bold">19.2 코인</p>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">현재 가치</h3>
+                    <ul>
+                        <li class="flex justify-between">
+                            <span>비트코인</span>
+                            <span>$45,000</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>이더리움</span>
+                            <span>$3,200</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>라이트코인</span>
+                            <span>$200</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <p class="font-semibold">전체 가치</p>
+                        <p class="text-2xl">$78,200</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- 버튼 섹션 -->
-            <div class="text-center mt-6">
+            <div class="mt-6 text-center">
                 <button
-                    class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-400 focus:outline-none"
+                    class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 focus:outline-none"
                 >
                     시작하기
                 </button>
-                <p class="text-sm mt-2 text-gray-400">
-                    템플릿을 사용하여 앱을 시작하세요.
-                </p>
             </div>
         </div>
 
@@ -74,10 +110,10 @@
             var tg = window.Telegram.WebApp;
             tg.ready();
 
-            // 페이지가 로드되면 미니앱을 전체 화면으로 확장
             if (window.Telegram.WebApp) {
                 tg.expand();
                 tg.requestFullscreen();
+                tg.disableVerticalSwipes();
             }
         </script>
     </body>
