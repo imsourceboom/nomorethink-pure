@@ -1,16 +1,16 @@
 html,
-body,
-main {
+body {
     height: 100%;
-    width: 100%;
-    overflow: hidden;
+    /* width: 100%; */
+    /* overflow: hidden; */
+    overflow-y: auto;
     overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
 }
 
-main {
+/* main {
     overflow-y: auto;
-}
+} */
 
 footer {
     border-top: 1px solid #fff; /* 푸터 상단 경계선 추가 */
