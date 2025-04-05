@@ -7,18 +7,74 @@
         <meta http-equiv="Cache-Control" content="no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+
+        <!-- Normalize.css와 TailwindCSS CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
-    <body>
-        <h1>No More Think</h1>
-        <h1>Full screen!</h1>
+    <body class="bg-gray-800 text-white font-sans">
+        <!-- Header (고정) -->
+        <div class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 z-50">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">No More Think</h1>
+                <div class="flex items-center">
+                    <!-- 사용자 프로필 이미지 -->
+                    <img
+                        src="https://via.placeholder.com/40"
+                        alt="User Profile"
+                        class="rounded-full mr-3"
+                    />
+                    <span class="text-sm">사용자 이름</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="mt-24 p-8">
+            <h2 class="text-4xl font-semibold mb-4 text-center">
+                Welcome to No More Think!
+            </h2>
+            <p class="text-lg text-center">
+                풀스크린 모드에서 콘텐츠를 확인하세요.
+            </p>
+            <div class="mt-6">
+                <!-- 이미지 추가 -->
+                <img
+                    src="https://via.placeholder.com/600x300"
+                    alt="Placeholder Image"
+                    class="w-full rounded-lg mb-6"
+                />
+                <p class="text-lg text-center">
+                    텔레그램 미니앱의 예시 화면입니다. 다양한 기능을 확인하세요.
+                </p>
+            </div>
+
+            <!-- 버튼 섹션 -->
+            <div class="text-center mt-6">
+                <button
+                    class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-400 focus:outline-none"
+                >
+                    시작하기
+                </button>
+                <p class="text-sm mt-2 text-gray-400">
+                    템플릿을 사용하여 앱을 시작하세요.
+                </p>
+            </div>
+        </div>
 
         <script>
-            // 텔레그램 웹앱이 준비되었을 때 호출되는 함수
             var tg = window.Telegram.WebApp;
             tg.ready();
 
-            // 페이지가 로드되면 바로 미니앱을 전체 화면으로 확장
+            // 페이지가 로드되면 미니앱을 전체 화면으로 확장
             if (window.Telegram.WebApp) {
                 tg.expand();
                 tg.requestFullscreen();
