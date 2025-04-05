@@ -9,19 +9,13 @@
         <meta http-equiv="Expires" content="0" />
 
         <!-- Normalize.css와 TailwindCSS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://yarnpkg.com/en/package/normalize.css"></script>
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         />
-        <link
-            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-            rel="stylesheet"
-        />
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            rel="stylesheet"
-        />
-
+        <link rel="stylesheet" href="style.css" />
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
     <body class="bg-gray-800 text-white font-sans pt-16">
@@ -93,13 +87,13 @@
         </div>
 
         <!-- 하단 고정 바 -->
-        <div
-            class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-8 flex justify-around items-center z-50"
+        <footer
+            class="fixed bottom-0 left-0 w-full bg-gray-800 text-white flex justify-around items-center z-50"
         >
             <i class="fas fa-home text-2xl cursor-pointer"></i>
             <i class="fas fa-piggy-bank text-2xl cursor-pointer"></i>
             <i class="fas fa-wallet text-2xl cursor-pointer"></i>
-        </div>
+        </footer>
 
         <script>
             var tg = window.Telegram.WebApp;
