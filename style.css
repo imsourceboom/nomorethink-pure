@@ -3,18 +3,16 @@ body,
 main {
     height: 100%;
     width: 100%;
-    /* overflow: hidden; */
-    /* overscroll-behavior: contain; */
+    overflow: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 main {
-    /* overflow-y: auto; */
+    overflow-y: auto;
 }
 
 footer {
-    /* height: 10vh; */
-    border: 1px solid white;
-    box-sizing: border-box;
-    /* padding-bottom: 5vh; */
-    padding: 3vh 0 7vh;
+    border-top: 1px solid #fff; /* 푸터 상단 경계선 추가 */
+    padding: 3vh 0 6vh; /* 푸터 상하 여백 */
 }
