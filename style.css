@@ -1,6 +1,14 @@
-body {
-    height: 100vh;
-    width: 100wh;
+html,
+body,
+main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+main {
+    overflow-y: auto;
 }
 
 footer {
