@@ -1,16 +1,11 @@
 html,
 body {
+    /* 스크롤 체이닝 방지 코드 */
+    /* html,body 에 아래 속성을 넣어야 한다 */
     height: 100%;
-    /* width: 100%; */
-    /* overflow: hidden; */
     overflow-y: auto;
     overscroll-behavior: contain;
-    /* -webkit-overflow-scrolling: touch; */
 }
-
-/* main {
-    overflow-y: auto;
-} */
 
 footer {
     border-top: 1px solid #fff; /* 푸터 상단 경계선 추가 */
